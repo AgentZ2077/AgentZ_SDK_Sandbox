@@ -1,0 +1,21 @@
+mint_elven_wine:
+  description: Mint an Elven Wine NFT and verify proof.
+  steps:
+    - action: "Check player reputation"
+    - action: "Call mint_nft(contract='elven_wine')"
+    - action: "Log zk proof"
+
+serve_customer:
+  description: Offer custom drink suggestion based on inventory.
+  steps:
+    - action: "Generate agent prompt from inventory"
+    - action: "Call dialogue_engine"
+    - action: "Log memory + reputation impact"
+
+sword_forge:
+  description: Forge a rare sword if strength > 80.
+  steps:
+    - if: "context.get('strength', 0) > 80"
+      action: "Initiate forging sequence"
+    - action: "Call mint_nft(contract='dragon_sword')"
+    - action: "Log zk proof"
