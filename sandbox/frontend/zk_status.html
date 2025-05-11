@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zkVerifier 状态图表</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 30px;
+        }
+        h1 {
+            color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔗 zkVerifier 合约存证状态</h1>
+    <canvas id="zkChart" width="600" height="400"></canvas>
+
+    <script>
+        const ctx = document.getElementById('zkChart').getContext('2d');
+        const zkChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Agent 1', 'Agent 2', 'Agent 3', 'Agent 4', 'Agent 5'],
+                datasets: [{
+                    label: '行为哈希数量（已验证）',
+                    data: [5, 3, 8, 2, 6],
+                    backgroundColor: 'rgba(0, 122, 255, 0.6)',
+                    borderColor: 'rgba(0, 122, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '行为记录数'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

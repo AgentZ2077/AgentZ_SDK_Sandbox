@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zkVerifier 交易详情</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        .tx-box {
+            border: 1px solid #ccc;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-left: 4px solid #0077cc;
+        }
+        .tx-box h3 {
+            margin-top: 0;
+        }
+        .hash {
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 zkVerifier 交易记录（模拟）</h1>
+    <div id="txList"></div>
+
+    <script>
+        const transactions = [
+            {
+                agent: "TavernKeeper NPC",
+                action: "Mint ElvenWine NFT",
+                zkHash: "0x3f9b...a1e2",
+                txId: "0xab12...89ef"
+            },
+            {
+                agent: "Guard AI",
+                action: "Check Player Reputation",
+                zkHash: "0xc7d1...4f3b",
+                txId: "0xcd34...aa11"
+            },
+            {
+                agent: "Merchant AI",
+                action: "Apply Hero Discount",
+                zkHash: "0x9f4a...7bcd",
+                txId: "0xff45...231a"
+            }
+        ];
+
+        const list = document.getElementById("txList");
+        transactions.forEach(tx => {
+            const div = document.createElement("div");
+            div.className = "tx-box";
+            div.innerHTML = `
+                <h3>${tx.agent}</h3>
+                <p><strong>行为:</strong> ${tx.action}</p>
+                <p><strong>zk Hash:</strong> <span class="hash">${tx.zkHash}</span></p>
+                <p><strong>交易哈希:</strong> <span class="hash">${tx.txId}</span></p>
+            `;
+            list.appendChild(div);
+        });
+    </script>
+</body>
+</html>

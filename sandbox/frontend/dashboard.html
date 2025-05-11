@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AgentZ Sandbox Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f9f9f9;
+        }
+        h1 {
+            color: #0077cc;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 16px;
+            background-color: #0077cc;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 AgentZ Web UI Sandbox</h1>
+
+    <div class="card">
+        <h2>🧠 推理时间线</h2>
+        <p>展示 AI Agent 推理 → 上链行为的完整路径。</p>
+        <a href="timeline.html" class="button" target="_blank">打开 timeline.html</a>
+    </div>
+
+    <div class="card">
+        <h2>📊 zkVerifier 状态图表</h2>
+        <p>展示每个 Agent 存证数量。</p>
+        <a href="zk_status.html" class="button" target="_blank">打开 zk_status.html</a>
+    </div>
+
+    <div class="card">
+        <h2>🔐 zkVerifier 存证详情</h2>
+        <p>查看 Agent 链上行为 + zk 哈希详情。</p>
+        <a href="zk_tx_detail.html" class="button" target="_blank">打开 zk_tx_detail.html</a>
+    </div>
+
+    <div class="card">
+        <h2>🔗 模拟 Web3 链上调用</h2>
+        <p>点击按钮触发行为 → 模拟交易和 zk 存证。</p>
+        <a href="mock_web3_call.html" class="button" target="_blank">打开 mock_web3_call.html</a>
+    </div>
+</body>
+</html>
